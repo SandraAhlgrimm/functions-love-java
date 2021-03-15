@@ -2,40 +2,53 @@
 
 Azure Function examples in Java
 
-## Vanilla Java
-
-To run it on your machine just use the following commands.
+To run it on your machine just use the following commands:
 
 ```bash
+cd {folder}
 mvn clean install
 mvn azure-functions:run
 ```
 
-Deploy to Azure Functions with `mvn azure-functions:deploy`.
+Deploy to Azure Functions with `mvn azure-functions:deploy`:
 
 ```bash
 mvn azure-functions:deploy
 ```
 
-## Quarkus
-
-Azure Functions are available for Java 8 and 11 since 1.12.0.Final.
-
-To run it on your machine just use the following commands.
+Run the following command to view near real-time [streaming logs](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=macos%2Ccsharp%2Cbash#enable-streaming-logs&WT..mc_id=java-20736-sakriema):
 
 ```bash
-mvn clean install
-mvn azure-functions:run
-```
-
-Deploy to Azure Functions with `mvn azure-functions:deploy`.
-
-```bash
-mvn azure-functions:deploy
+func azure functionapp logstream <APP_NAME> 
 ```
 
 You need to have an Azure Subscription to deploy to Azure. [Checkout Azure's free offerings](https://aka.ms/az-free)
 And you need to be logged-in to your Azure Account within your [az-cli](https://aka.ms/install-az-cli). Run `az login` to log in.
+
+Make sure to follow the [best practices for Azure Functions](https://aka.ms/az-best-functions):
+
+- Avoid long running functions
+- Take care of cross function communication
+- Make your functions stateless
+- Write defensive functions
+- Organize functions for performance and scaling
+- Don't mix test and production code in the same function app
+
+more at the [official documentation for best practices](https://aka.ms/az-best-functions).
+
+## Vanilla Java
+
+To build this project yourself, you can leverage from maven archetype.
+
+```bash
+mvn archetype:generate -DarchetypeGroupId=com.microsoft.azure -DarchetypeArtifactId=azure-functions-archetype -DjavaVersion=11
+```
+
+More details can be find [here](https://aka.ms/az-java-function).
+
+## Quarkus
+
+Azure Functions are available for Java 8 and 11 since 1.12.0.Final.
 
 To build this project yourself, you can leverage from maven archetype.
 
@@ -45,3 +58,5 @@ mvn archetype:generate \
     -DarchetypeArtifactId=quarkus-azure-functions-http-archetype \
     -DarchetypeVersion=1.12.1.Final
 ```
+
+Find more details for Azure Functions and Quarkus [here](https://quarkus.io/guides/azure-functions-http).
