@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, azure-function, azure-function-http, java, java-application, junit, logback, maven, readme, yaml]

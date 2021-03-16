@@ -60,3 +60,11 @@ mvn archetype:generate \
 ```
 
 Find more details for Azure Functions and Quarkus [here](https://quarkus.io/guides/azure-functions-http).
+
+## Micronaut
+
+Let [micronaut.io](https://micronaut.io/launch/) generate your starting project.
+
+Java 11 is not supported yet and will fall back to 8.
+
+This repo used [https://micronaut.io/launch/?javaVersion=JDK_8&lang=JAVA&build=MAVEN&test=JUNIT&name=demo&package=com.example&type=DEFAULT&features=azure-function&version=2.4.0&activity=preview&showing=/pom.xml](https://micronaut.io/launch/?javaVersion=JDK_11&lang=JAVA&build=MAVEN&test=JUNIT&name=demo&package=com.example&type=DEFAULT&features=azure-function&version=2.4.0&activity=preview&showing=/pom.xml)
