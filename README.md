@@ -16,7 +16,7 @@ Deploy to Azure Functions with `mvn azure-functions:deploy`:
 mvn azure-functions:deploy
 ```
 
-Run the following command to view near real-time [streaming logs](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=macos%2Ccsharp%2Cbash#enable-streaming-logs&WT..mc_id=java-20736-sakriema):
+Run the following command to view near real-time [streaming logs](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=macos,csharp,bash&WT.mc_id=java-0000-sakriema#enable-streaming-logs&WT..mc_id=java-20736-sakriema):
 
 ```bash
 func azure functionapp logstream <APP_NAME> 
